@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#478ac9">
+      <meta property="og:title" content="Home">
+      <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href="../../static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../static/css/templatemo-style.css" rel="stylesheet" type="text/css">
+
+    <title>{% block title %}Home{% endblock %}</title>
+
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <meta name="keywords" content="TRASIA YOUR IDEAL COMPANION">
+      <meta name="description" content="">
+      <meta name="page_type" content="np-template-header-footer-from-plugin">
+      
+      <link rel="stylesheet" href="../static/css/Home.css" media="screen">
+      <link rel="stylesheet" href="../static/css/nicepage.css" media="screen">
+      <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+      <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+      <meta name="generator" content="Nicepage 4.2.0, nicepage.com">
+      <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+      
+      
+      <script type="application/ld+json">{
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "",
+      "logo": "images/default-logo.png"
+  }</script>
+      
+    
+
+    <style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+      .w3-bar-block .w3-bar-item {padding:20px}
+      </style>
+
+    <style>
+      .dropbtn {
+  background-color: #8f055a;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #7e0574;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(202, 46, 163, 0.774);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(243, 204, 233);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #ab6ac5;}
+      
+
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #D4BC8B;
+      background-image: url(../img/banner-bg.jpg);
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .container2 {
+      padding: 30px;
+      background-color: #ffffff;
+      width :250%;
+    }
+    
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 1%;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #ebd0d8;
+      font-size: 20px;
+      color: #FFFFFF;
+      font-family: 'Century Gothic', 'Times New Roman', serif;
+    }
+    
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: rgb(207, 153, 238);
+      outline: none;
+    }
+    
+    /* Overwrite default styles of hr */
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 20px;
+    }
+    
+    /* Set a style for the submit button */
+    .submitbtn {
+      background-color: #800000;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    .submitbtn:hover {
+      opacity: 1;
+    }
+    
+    /* Add a blue text color to links */
+    a {
+      color: dodgerblue;
+    }
+    
+    /* Set a grey background color and center the text of the "sign in" section */ 
+    .signin {
+      background-color: #ff8080;
+      text-align: center;
+    }
+
+
+
+
+
+    .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 5px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e78383;
+}
+
+.button4:hover {background-color: #4e0101;}
+
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+
+
+
+
+
+  .container3 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container3 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container3:hover input ~ .checkmark3 {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container3 input:checked ~ .checkmark3 {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark3:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container3 input:checked ~ .checkmark3:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container3 .checkmark3:after {
+     top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #e2eef7}
+tr:nth-child(odd){background-color: #e9e7f5}
+
+
+
+
+.Input {
+position: relative;
+}
+
+.Input-text {
+display: block;
+margin: 0;
+height:3%;
+padding: var(--inputPaddingV) var(--inputPaddingH);
+color: inherit;
+width: 100%;
+font-family: inherit;
+font-size: var(--inputFontSize);
+font-weight: inherit;
+line-height: var(--inputLineHeight);
+border: none;
+border-radius: 0.4rem;
+transition: box-shadow var(--transitionDuration);
+}
+
+.Input-text::placeholder {
+color: #B0BEC5;
+}
+
+.Input-text:focus {
+outline: none;
+box-shadow: 0.2rem 0.8rem 1.6rem var(--colorPrimary600);
+}
+
+.Input-label {
+display: block;
+position: absolute;
+bottom: 50%;
+left: 1rem;
+color: #fff;
+font-family: inherit;
+font-size: var(--inputFontSize);
+font-weight: inherit;
+line-height: var(--inputLineHeight);
+opacity: 0;
+transform: 
+  translate3d(0, var(--labelDefaultPosY), 0)
+  scale(1);
+transform-origin: 0 0;
+transition:
+  opacity var(--inputTransitionDuration) var(--inputTransitionTF),
+  transform var(--inputTransitionDuration) var(--inputTransitionTF),
+  visibility 0ms var(--inputTransitionDuration) var(--inputTransitionTF),
+  z-index 0ms var(--inputTransitionDuration) var(--inputTransitionTF);
+}
+
+.Input-text:placeholder-shown + .Input-label {
+visibility: hidden;
+z-index: -1;
+}
+
+.Input-text:not(:placeholder-shown) + .Input-label,
+.Input-text:focus:not(:placeholder-shown) + .Input-label {
+visibility: visible;
+z-index: 1;
+opacity: 1;
+transform:
+  translate3d(0, var(--labelTransformedPosY), 0)
+  scale(var(--labelScaleFactor));
+transition:
+  transform var(--inputTransitionDuration),
+  visibility 0ms,
+  z-index 0ms;
+}
+
+.container {
+                        /* Used to position the video and content */
+                        position: relative;
+                    }
+
+                    .container__wrapper {
+                        /* Positioned at the top left corner */
+                        left: 0px;
+                        position: absolute;
+                        top: 0px;
+
+                        /* Take full size */
+                        height: 100%;
+                        width: 100%;
+
+                        /* Hide the scrollbar */
+                        overflow: hidden;
+                    }
+
+                    .container__video {
+                        object-fit: cover;
+
+                        /* Center the video */
+                        left: 50%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+
+                        /* Take full width */
+                        width: 100%;
+                    }
+
+                    .container__content {
+                        /* Positioned at the top left corner */
+                        left: 0px;
+                        position: absolute;
+                        top: 0px;
+
+                        /* Take full size */
+                        height: 100%;
+                        width: 100%;
+
+                        /* Center the content */
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+</style>
+
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" id="signUp" href="/" style="background-color: #8f055a;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;">HOMEPAGE</a>
+            <a class="nav-item nav-link" id="home" href="/login" style="background-color: #8f055a;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;">LOGIN</a>
+              <a class="nav-item nav-link" id="signUp" href="/sign-up" style="background-color: #8f055a;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;">SIGN UP</a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="u-align-center u-clearfix u-image u-section-1" id="carousel_5a1e">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+          <h2  style="color: rgb(255, 255, 255); font-size: 80px; font-weight: bold; font-family:Hashed Browns; text-shadow: 4px 4px rgb(241, 194, 194);">T R A S I A</h2>
+          <h2  style="color: rgb(255, 255, 255); font-size: 30px; font-weight: bold; font-family:century gothic;">YOUR IDEAL COMPANION</h2>
+          <div class="u-border-2 u-border-palette-1-base u-line u-line-horizontal u-line-1"></div>
+          <p class="u-text u-text-font u-text-2" style="color: rgb(255, 255, 255);">The first place to look for environmentally friendly visit to nearby local attractions</p>
+          <div class="u-clearfix u-disable-padding u-gutter-30 u-layout-wrap u-layout-wrap-1">
+            <div class="u-gutter-0 u-layout">
+              <div class="u-layout-col">
+                <div class="u-size-30">
+                  <div class="u-layout-row">
+                    <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-20 u-white u-layout-cell-1">
+                      <div class="u-border-1 u-border-grey-light-1 u-container-layout u-valign-top u-container-layout-1">
+                        <img class="u-expanded-width u-image u-image-1" src="../static/images/Tp1.jpg" imgwidth="900" imgheight="600">
+                        <h3 class="u-align-center u-heading-font u-text u-text-grey-dark-1 u-text-3">KLCC</h3>
+                        <p class="u-text u-text-font u-text-grey-dark-1 u-text-4">Described by its developers as 'A City Within A City', KLCC offers a myriad of interesting attractions that never cease to wonder, as well as plenty of nightlife, dining and shopping options.</p>
+                      </div>
+                    </div>
+                    <div class="u-align-left u-container-style u-layout-cell u-size-20 u-white u-layout-cell-2">
+                      <div class="u-border-1 u-border-grey-light-1 u-container-layout u-valign-top u-container-layout-2">
+                        <img class="u-expanded-width u-image u-image-2" src="../static/images/Tp2.jpg" imgwidth="900" imgheight="600">
+                        <h3 class="u-align-center u-heading-font u-text u-text-grey-dark-1 u-text-5">National Mosque</h3>
+                        <p class="u-text u-text-font u-text-grey-dark-1 u-text-6">National Mosque of Malaysia is a mosque in Kuala Lumpur, Malaysia. It has a capacity for 15,000 people and is situated among 13 acres of gardens. Its key features are a 73-metre-high minaret and a 16-pointed star concrete main roof.</p>
+                      </div>
+                    </div>
+                    <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-20 u-white u-layout-cell-3">
+                      <div class="u-border-1 u-border-grey-light-1 u-container-layout u-valign-top u-container-layout-3">
+                        <img class="u-expanded-width u-image u-image-3" src="../static/images/Tp3.jpg" imgwidth="900" imgheight="547">
+                        <h3 class="u-align-center u-heading-font u-text u-text-grey-dark-1 u-text-7">Atmosphere 360</h3>
+                        <p class="u-text u-text-font u-text-grey-dark-1 u-text-8">Atmosphere 360 is a modern and elegant revolving restaurant situated 282m above ground level located at the tallest tower in Southeast Asia - Menara Kuala Lumpur.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-size-30">
+                  <div class="u-layout-col">
+                    <div class="u-align-left u-container-style u-layout-cell u-left-cell u-right-cell u-size-60 u-layout-cell-4">
+                      <div class="u-container-layout u-valign-middle">
+                        <a href="/login" class="u-btn u-button-style u-btn-1">SHOW MORE</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
+    
+    </div>
+        
+      
+
+
+
+
+  </body>
+</html>

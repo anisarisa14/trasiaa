@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://kit.fontawesome.com/1501f3b355.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href="../../static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../static/css/templatemo-style.css" rel="stylesheet" type="text/css">
+
+    <title>{% block title %}Home{% endblock %}</title>
+
+    <style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+      .w3-bar-block .w3-bar-item {padding:20px}
+      </style>
+
+    <style>
+      .dropbtn {
+  background-color: #8f055a;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #7e0574;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(202, 46, 163, 0.774);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(243, 204, 233);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #ab6ac5;}
+      
+
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+  height: 400px;
+  color:#8f055a;
+  background: white;
+  border-radius: 25px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+
+      
+  </head>
+
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          {% if user.is_authenticated %}
+            {% if user.type == 'user' %}
+              <a class="nav-item nav-link" id="home" href="/home" style="background-color: #8f055a;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;">HOME</a>
+              <a class="nav-item nav-link" id="update" href="/update" style="background-color: #8f055a;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;">UPDATE</a>      <!--   href penting   -->
+              <div class="dropdown">
+                <button class="dropbtn">ATTRACTIONS</button>
+                  <div class="dropdown-content">
+                    <a class="nav-item nav-link" id="home" href="/all_place">ALL PLACES</a>
+                    <a class="nav-item nav-link" id="home" href="/all_restaurant">ALL RESTAURANT</a>
+                    <a class="nav-item nav-link" id="home" href="/rec_place">PLACES RECOMMENDATION</a>
+                    <a class="nav-item nav-link" id="home" href="/rec_restaurant">RESTAURANTS RECOMMENDATION</a>
+                  </div>
+            </div>
+            <a class="nav-item nav-link" id="update" href="/view_ho_user" style="background-color: #8f055a;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;">HEALTH ORGANISATION</a>
+            <div class="dropdown">
+                <button class="dropbtn">RATE HISTORY</button>
+                  <div class="dropdown-content">
+                    <a class="nav-item nav-link" id="home" href="/rate_history_place">PLACES</a>
+                    <a class="nav-item nav-link" id="home" href="/rate_history_restaurant">RESTAURANTS</a>
+                  </div>
+            </div>
+            <a class="nav-item nav-link" id="update" href="/view_contact" style="background-color: #8f055a;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;">TRASIA</a>
+            <a class="nav-item nav-link" id="logout" href="/delete_acc" style="background-color: #8f055a;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;">DELETE ACCOUNT</a>
+            <a class="nav-item nav-link" id="logout" href="/logout" style="background-color: #8f055a;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;">LOGOUT</a>
+            {% else %}
+              <a class="nav-item nav-link" id="home" href="/home" style="background-color: #8f055a;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;">HOMEPAGE</a>
+              <a class="nav-item nav-link" id="update" href="/updateAdmin" style="background-color: #8f055a;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;">UPDATE</a>
+              <div class="dropdown">
+                  <button class="dropbtn">LOCAL ATTRACTIONS</button>
+                    <div class="dropdown-content">
+                      <a class="nav-item nav-link" id="home" href="/view_place">PLACE</a>
+                      <a class="nav-item nav-link" id="home" href="/view_restaurant">RESTAURANT</a>
+                      <a class="nav-item nav-link" id="home" href="/add_place">ADD NEW</a>
+                    </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">HEALTH ORGANISATION</button>
+                  <div class="dropdown-content">
+                    <a class="nav-item nav-link" id="home" href="/view_ho">VIEW</a>
+                    <a class="nav-item nav-link" id="home" href="/add_ho">ADD NEW</a>
+                  </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">USER HISTORY</button>
+                  <div class="dropdown-content">
+                    <a class="nav-item nav-link" id="home" href="/view_user">VIEW USER</a>
+                    <a class="nav-item nav-link" id="home" href="/rate_history_placeA">PLACE RATING</a>                    
+                    <a class="nav-item nav-link" id="home" href="/rate_history_restaurantA">RESTAURANT RATING</a>
+                  </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">ADMIN</button>
+                  <div class="dropdown-content">
+                    <a class="nav-item nav-link" id="home" href="/view_admin">VIEW ADMIN</a>
+                    <a class="nav-item nav-link" id="home" href="/add_admin">ADD ADMIN</a>
+                  </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">CONTACT</button>
+                  <div class="dropdown-content">
+                    <a class="nav-item nav-link" id="home" href="/contact">VIEW</a>
+                  </div>
+            </div>
+              <a class="nav-item nav-link" id="logout" href="/logout" style="background-color: #8f055a;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;">Logout</a>
+              {% endif %}
+          {% else %}
+          <a class="nav-item nav-link" id="signUp" href="/" style="background-color: #8f055a;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;">HOMEPAGE</a>
+          <a class="nav-item nav-link" id="home" href="/login" style="background-color: #8f055a;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;">LOGIN</a>
+            <a class="nav-item nav-link" id="signUp" href="/sign-up" style="background-color: #8f055a;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;">SIGN UP</a>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+
+    
+
+    <div class="container">{% block content %} {% endblock %}</div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='index.js') }}"
+    ></script>
+
+
+    <footer class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <small class="templatemo-light-brown-text text-uppercase">
+                    Copyright © 2084 Your Company Name
+                  </small>
+        </div>				
+      </div>		
+    </footer>
+  
+    <script src="../../static/js/jquery-1.11.1.min.js"></script>
+    <script src="../../static/js/bootstrap.min.js"></script>
+    <script src="../../static/js/jquery.singlePageNav.min.js"></script>
+    <script src="../../static/js/templatemo-script.js"></script>
+    
+  </body>
+</html>
